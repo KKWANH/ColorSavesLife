@@ -61,7 +61,7 @@ docker run
 
 ## 🏛️ Architecture - Prototype
 
-<div width="100%"><img src="/imgs/architecture-prototype.png" align="center" width="250"></div><br/
+<img src="/imgs/architecture-prototype.png" align="center">
 
 ## 🤔 Future Development Plan
 
