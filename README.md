@@ -1,6 +1,7 @@
 # 🎨 Color Saves Life!
 
-<div width="100%"><img src="/imgs/logo.png" align="center" width="250"></div><br/><hr>
+<div width="100%" align="center"><img src="/imgs/logo.png" align="center" width="50%"></div>
+<hr>
 
 ## 📁 Folder Structure
 ```shell
