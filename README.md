@@ -88,12 +88,19 @@ docker run
 <img src="/imgs/architecture-prototype.png" align="center">
 
 ## 🤔 Future Development Plan
-
-Color disability is not only disability that affects to normal life. In the report of WHO(World Health Organization), one of five people has problem of hearing [(who.int/health-topics/hearing-loss)](https://www.who.int/health-topics/hearing-loss#tab=tab_1). It is very important fact tht 80% of them are living in low-income/mid-income countries, and hearing care interventions are cost-effective. If they can get help for their life with getting driving skills, this will effect a lot. In this purpose, we suggest two more plugins which can deploy on our system.
+Color disability is not only disability that affects to normal life. In the report of WHO(World Health Organization), one of five people has problem of hearing [(who.int/health-topics/hearing-loss)](https://www.who.int/health-topics/hearing-loss#tab=tab_1). It is very important fact that 80% of them are living in low-income/mid-income countries, and hearing care interventions are cost-effective. If they can get help for their life with getting driving skills, this will effect a lot. With this solucation Solution, we can help them to drive much more safely and make their life much more easier and enjoyable for driving. As an example, we show you some of our future development plan for hearing disability and dementia. 
 
 ### 🔈 SoundVisualizer for HearingDisability
+Sound sense is also so much important in driving situations and sirious problem. There are 450 million people who have hearing disability. Think about the emargency situation that ambulance is coming from your behind. If you have problem with hearing, this will cause worse circumstanses like car accident or a person who needs help cannot be alive. But with SoundVisualizer plugin , that visualize any sound around your car and which direction does it comes from on front driver window. This will help you to react to the situation and make a right decision.
 
-Sounds are also important signal in driving situations. Think about the situation that a policeman ask your car to stop. But if you have problem with hearing, this will cause more bad circumstanses. If we visualize which kind of sound is it and which directions does it comes from. In this plugin, we use -- AI model to analyze sound. Attaching microphone in your car and change your front-display's plugin into SoundVisualizer, **BOOM! Now you see the sound.**
+### AI Driving Assistant for Dementia
+Dmentia is also a serious problem for driving. There are 55 million people who have dementia. Even their disablity is not effecting to their driving skills, they are not allowed to drive in some countries. Because they tend to pay less attention to the road and they are not able to make a right decision. With our AI Driving Assistant plugin for Dementia, that learn the driver's driving pattern and other driving data, that can show some warning message or make a sound when the driver is not paying attention to the road or detecting some unusual driving pattern.
+
+### User Status with Germification
+XXX
+
+
+So our platform is not only for color disability, bu also for other disability. That have so much potential to help peeople who have disability and make their life much more easier and enjoyable for driving.
 
 #### Architecture
 
