@@ -4,6 +4,20 @@
 
 # 🚢 Welcome abord, let me explain what it is
 
+<div width="100%" align="center">
+    <img width="49%" src="/imgs/friedrichstrasse-road.jpg">
+    <img width="49%" src="/imgs/friedrichstrasse-road-grayscale.jpg">
+</div>
+
+> This example is for **achromatopsia**, which can see the world with only grayscale. There are lot more types of color-disability than chromatopsia.
+
+**We all love Berlin.**
+The picture above is a image of Friedrichstraße, which is close to Haupftbanhof(centeral station) of Berlin. You can see heavy traffic here, let's imagine a situation that you've become a color-blinded person. If the unexpected car, bicycle, comes in front of you, can you react and brake down your car at the exact right time? At this point, you can see color disability is critical for driving situation, which can hurt someone's life. Most of color disabled people cannot drive. Even getting drive license is not allowed in some countries.
+
+Our **Color Saves Life** program comes at this point. Our goal is to attatch **transparent display** on front-window of vehicle*(Thanks to LG 😄)*, and simple sensors (normal camera in colorblind case). Boom! Now you can see AugmentedReality - Based - Driver Infortainment! In our program, we used Gazebo Simulator for prototype development. To adventure the our world of Gazebo Simulator, please move with [this link](#world-of-simulator). You can find full storyline about the simulator here.
+
+Another important feature of our program, is **Easy-to-develop**. If you just add your detecting algorithm and drawing part(opencv) for each frame in `plugins` folder, it is very easy 
+
 ## 📁 Folder Structure
 ```shell
 ./
@@ -33,7 +47,7 @@
  │       ├── disability_assistant.py
  │       └── main.py
  │
- ├── test_drive_data     # rosbag data of driving in gazebo to test the detection model
+ ├── test_drive_data.tar.xz   # rosbag data of driving in gazebo to test the detection model
  │
  ├── docker/
  ├── docker-compose.yaml
@@ -57,6 +71,8 @@ docker run
 ```
 
 3. Get in to docker container, turn on the python script
+
+### World of Simulator
 
 
 ## 🏛️ Architecture - Ideal
