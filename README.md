@@ -1,5 +1,6 @@
 <div width="100%" align="center"><h1>🎨 Color Saves Life!</h1></div>
 <div width="100%" align="center"><img src="/imgs/logo.png" align="center" width="50%"></div>
+<div width="100%" align="center"><hr width="50" align="center"></div>
 
 # 🚢 Welcome abord, let me explain what it is
 
