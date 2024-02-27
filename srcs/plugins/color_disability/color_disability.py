@@ -1,4 +1,4 @@
-import  cv2
+import cv2
 import torch
 import  numpy as np
 from    PIL \
@@ -45,8 +45,6 @@ class   ColorDisability(Plugin):
         def __init__(self):
             pass
         def get_traffic_light_color(self, frame):
-            cv2.imshow("Red", frame)
-            cv2.waitKey(1)
             hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
             red_lower = np.array([0, 50, 50])
@@ -78,8 +76,6 @@ class   ColorDisability(Plugin):
             if roi.size == 0:
                 raise ValueError(f"ROI {roi_bounds} results in an empty image. Check the coordinates.")
 
-            cv2.imshow("frame", frame)
-            cv2.waitKey(1)
             color = self.get_traffic_light_color(roi)
             print("[Plugin] [ColorDisability] [TrafficLight] detected color: ", color)
 

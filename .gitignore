@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
+srcs/yolov5/
+ros2_pkg/rosbag2_2024_02_27-19_41_41/*
 
 # C extensions
 *.so
