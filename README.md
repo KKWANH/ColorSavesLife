@@ -1,23 +1,7 @@
 # 🎨 Color Saves Life!
 
-<div width="100%"><img src="/imgs/logo.png" align="center" width="250"></div><br/>
-
-## Index
-- [🎨 Color Saves Life!](#-color-saves-life)
-  - [Index](#index)
-  - [🛠️ Features](#️-features)
-  - [📁 Folder Structure](#-folder-structure)
-  - [❓ How to Use](#-how-to-use)
-  - [🏛️ Architecture - Ideal](#️-architecture---ideal)
-  - [🏛️ Architecture - Prototype](#️-architecture---prototype)
-  - [🤔 Future Development Plan](#-future-development-plan)
-    - [🔈 SoundVisualizer for HearingDisability](#-soundvisualizer-for-hearingdisability)
-      - [Architecture](#architecture)
-      - [Example image](#example-image)
-    - [🏫 Gamified Education Application](#-gamified-education-application)
-  - [🫂 Team Member](#-team-member)
-
-## 🛠️ Features
+<div width="100%" align="center"><img src="/imgs/logo.png" align="center" width="50%"></div>
+<hr>
 
 ## 📁 Folder Structure
 ```shell
