@@ -1,1 +1,0 @@
-/home/ha/Desktop/bcx/bcx_ws/src/sim/launch/test.launch.py
