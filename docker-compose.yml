@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  ros2-foxy-env:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1 # Fix a bug with QT
+      - XAUTHORITY=/tmp/.docker.xauth
+    user: ${UID}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /tmp/.docker.xauth:/tmp/.docker.xauth
+      - ./srcs:/app/src
+      - ./ros2_pkg:/app/pkg/
+    network_mode: "host"
+    stdin_open: true
+    privileged: true
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: all
+            capabilities: [gpu]
+volumes:
+  ros2-foxy-env:
