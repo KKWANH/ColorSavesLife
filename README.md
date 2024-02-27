@@ -59,6 +59,8 @@ docker run
 
 ## 🏛️ Architecture - Ideal
 
+<img src="/imgs/architecture-ideal.png" align="center">
+
 ## 🏛️ Architecture - Prototype
 
 <img src="/imgs/architecture-prototype.png" align="center">
