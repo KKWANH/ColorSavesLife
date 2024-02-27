@@ -1,49 +1,46 @@
-# 🎨 Color Saves Life!
+<div width="100%" align="center"><h1>🎨 Color Saves Life!</h1></div>
+<div width="100%" align="center"><img src="/imgs/logo.png" align="center" width="50%"></div>
 
-<div width="100%"><img src="/imgs/logo.png" align="center" width="250"></div><br/>
-
-## Index
-- [🎨 Color Saves Life!](#-color-saves-life)
-  - [Index](#index)
-  - [🛠️ Features](#️-features)
-  - [📁 Folder Structure](#-folder-structure)
-  - [❓ How to Use](#-how-to-use)
-  - [🏛️ Architecture - Ideal](#️-architecture---ideal)
-  - [🏛️ Architecture - Prototype](#️-architecture---prototype)
-  - [🤔 Future Development Plan](#-future-development-plan)
-    - [🔈 SoundVisualizer for HearingDisability](#-soundvisualizer-for-hearingdisability)
-      - [Architecture](#architecture)
-      - [Example image](#example-image)
-    - [🏫 Gamified Education Application](#-gamified-education-application)
-  - [🫂 Team Member](#-team-member)
-
-## 🛠️ Features
+# 🚢 Welcome abord, let me explain what it is
 
 ## 📁 Folder Structure
 ```shell
-.
-│
-├── srcs/
-│   ├── ?
-│   ├── ROS
-│   └── AssistantPythonClient/
-|       ├── assets/  # test images, fonts
-|       ├── plugins/ # You can deploy your own plugin here
-|           ├── color_disability/
-|               ├── model/
-|               ├── color_disability.py
-|               └── traffic_object.py
-|           ├── plugin.py
-|           └── plugin_master.py
-|       ├── disability_assistant.py
-|       └── main.py
-│
-├── Dockerfile
-│
-├── LICENSE
-└── README.md    # your entrypoint!
-main.py
-- 
+./
+ │
+ ├── srcs/
+ │   │   
+ │   ├── ros2pkg/
+ │   │   ├── image_subscriber/
+ │   │   └── test_publisher/
+ │   │
+ │   └── srcs/
+ │       │   # Simulation Part
+ │       ├── simulation_ws/src/
+ │       │   ├── sim/        # ros2 pkg for gazbeo simulation world and vehicle model
+ │       │   ├── teleop/     # ros2 pkg for gazbeo vehicle teleoperation
+ │       │   └── tracking/   # ros2 pkg for detecting the eye position
+ │       │
+ │       │   # Python Client
+ │       ├── assets/     # test images, fonts
+ │       ├── plugins/    # You can deploy your own plugin here
+ │       │   ├── color_disability/
+ │       │   │   ├── model/
+ │       │   │   ├── color_disability.py
+ │       │   │   └── traffic_object.py
+ │       │   ├── plugin.py
+ │       │   └── plugin_master.py
+ │       ├── disability_assistant.py
+ │       └── main.py
+ │
+ ├── test_drive_data     # rosbag data of driving in gazebo to test the detection model
+ │
+ ├── docker/
+ ├── docker-compose.yaml
+ │
+ ├── LICENSE
+ │
+ ├── imgs/        # image files for documentation
+ └── README.md    # your entrypoint!
 ```
 
 ## ❓ How to Use
