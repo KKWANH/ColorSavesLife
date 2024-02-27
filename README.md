@@ -11,6 +11,10 @@
   - [🏛️ Architecture - Ideal](#️-architecture---ideal)
   - [🏛️ Architecture - Prototype](#️-architecture---prototype)
   - [🤔 Future Development Plan](#-future-development-plan)
+    - [🔈 SoundVisualizer for HearingDisability](#-soundvisualizer-for-hearingdisability)
+      - [Architecture](#architecture)
+      - [Example image](#example-image)
+    - [🏫 Gamified Education Application](#-gamified-education-application)
   - [🫂 Team Member](#-team-member)
 
 ## 🛠️ Features
@@ -67,7 +71,17 @@ docker run
 
 ## 🤔 Future Development Plan
 
-We are not  
+Color disability is not only disability that affects to normal life. In the report of WHO(World Health Organization), one of five people has problem of hearing [(who.int/health-topics/hearing-loss)](https://www.who.int/health-topics/hearing-loss#tab=tab_1). It is very important fact tht 80% of them are living in low-income/mid-income countries, and hearing care interventions are cost-effective. If they can get help for their life with getting driving skills, this will effect a lot. In this purpose, we suggest two more plugins which can deploy on our system.
+
+### 🔈 SoundVisualizer for HearingDisability
+
+Sounds are also important signal in driving situations. Think about the situation that a policeman ask your car to stop. But if you have problem with hearing, this will cause more bad circumstanses. If we visualize which kind of sound is it and which directions does it comes from. In this plugin, we use -- AI model to analyze sound. Attaching microphone in your car and change your front-display's plugin into SoundVisualizer, **BOOM! Now you see the sound.**
+
+#### Architecture
+
+#### Example image
+
+### 🏫 Gamified Education Application
 
 ## 🫂 Team Member
 - Kwanho Kim: [@KKWANH](https://github.com/KKWANH)
