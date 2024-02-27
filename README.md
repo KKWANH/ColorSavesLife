@@ -1,7 +1,8 @@
 # 🎨 Color Saves Life!
 
-![logo](/imgs/logo.png){: width="40%"}{: .center}
+<div width="100%"><img src="/imgs/logo.png" align="center" width="250"></div><br/>
 
+## Index
 - [🎨 Color Saves Life!](#-color-saves-life)
   - [🛠️ Features](#️-features)
   - [📁 Folder Structure](#-folder-structure)
