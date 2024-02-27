@@ -4,6 +4,7 @@
 
 ## Index
 - [🎨 Color Saves Life!](#-color-saves-life)
+  - [Index](#index)
   - [🛠️ Features](#️-features)
   - [📁 Folder Structure](#-folder-structure)
   - [❓ How to Use](#-how-to-use)
@@ -59,6 +60,8 @@ docker run
 ## 🏛️ Architecture - Ideal
 
 ## 🏛️ Architecture - Prototype
+
+<img src="/imgs/architecture-prototype.png" align="center">
 
 ## 🤔 Future Development Plan
 
