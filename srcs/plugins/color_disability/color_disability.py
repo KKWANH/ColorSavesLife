@@ -137,7 +137,7 @@ class   ColorDisability(Plugin):
             frame_pil = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
             draw = ImageDraw.Draw(frame_pil)
             font = ImageFont.truetype(font_path, font_size)
-            text_width, text_height = draw.textsize(info_text, font=font)
+            text_width, text_height = mytextsize(info_text, font=font)
             text_x = roi_bounds[2] + corner_padding
             text_y = roi_bounds[1] + border_padding - padding
             
