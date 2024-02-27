@@ -1,46 +1,46 @@
-# 🎨 Color Saves Life!
-
+<div width="100%" align="center"><h1>🎨 Color Saves Life!</h1></div>
 <div width="100%" align="center"><img src="/imgs/logo.png" align="center" width="50%"></div>
-<hr>
+
+# 🚢 Welcome abord, let me explain what it is
 
 ## 📁 Folder Structure
 ```shell
-.
-│
-├── srcs/
-│   │   
-│   ├── ros2pkg/
-│   │   ├── image_subscriber/
-│   │   └── test_publisher/
-│   │
-│   └── srcs/
-│       │   # Simulation Part
-│       ├── simulation_ws/src/
-│       │   ├── sim/        # ros2 pkg for gazbeo simulation world and vehicle model
-│       │   ├── teleop/     # ros2 pkg for gazbeo vehicle teleoperation
-│       │   └── tracking/   # ros2 pkg for detecting the eye position
-│       │
-│       │   # Python Client
-│       ├── assets/     # test images, fonts
-│       ├── plugins/    # You can deploy your own plugin here
-│       │   ├── color_disability/
-│       │   │   ├── model/
-│       │   │   ├── color_disability.py
-│       │   │   └── traffic_object.py
-│       │   ├── plugin.py
-│       │   └── plugin_master.py
-│       ├── disability_assistant.py
-│       └── main.py
-│
-├── test_drive_data     # rosbag data of driving in gazebo to test the detection model
-│
-├── docker/
-├── docker-compose.yaml
-│
-├── LICENSE
-│
-├── imgs/        # image files for documentation
-└── README.md    # your entrypoint!
+./
+ │
+ ├── srcs/
+ │   │   
+ │   ├── ros2pkg/
+ │   │   ├── image_subscriber/
+ │   │   └── test_publisher/
+ │   │
+ │   └── srcs/
+ │       │   # Simulation Part
+ │       ├── simulation_ws/src/
+ │       │   ├── sim/        # ros2 pkg for gazbeo simulation world and vehicle model
+ │       │   ├── teleop/     # ros2 pkg for gazbeo vehicle teleoperation
+ │       │   └── tracking/   # ros2 pkg for detecting the eye position
+ │       │
+ │       │   # Python Client
+ │       ├── assets/     # test images, fonts
+ │       ├── plugins/    # You can deploy your own plugin here
+ │       │   ├── color_disability/
+ │       │   │   ├── model/
+ │       │   │   ├── color_disability.py
+ │       │   │   └── traffic_object.py
+ │       │   ├── plugin.py
+ │       │   └── plugin_master.py
+ │       ├── disability_assistant.py
+ │       └── main.py
+ │
+ ├── test_drive_data     # rosbag data of driving in gazebo to test the detection model
+ │
+ ├── docker/
+ ├── docker-compose.yaml
+ │
+ ├── LICENSE
+ │
+ ├── imgs/        # image files for documentation
+ └── README.md    # your entrypoint!
 ```
 
 ## ❓ How to Use
