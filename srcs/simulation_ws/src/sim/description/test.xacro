@@ -1,0 +1,334 @@
+<?xml version="1.0"?>
+<robot name="test" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- LINK: base_footprint -->
+  <link name="base_footprint"></link>
+
+  <!-- LINK: area -->
+  <link name="area">
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+
+    <collision name='area_collision'>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.42 0.42 0.42"/>
+      </geometry>
+    </collision>
+
+    <!-- <visual name='area_visual'>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.42 0.42 0.42"/>
+      </geometry>
+    </visual> -->
+  </link>
+
+  <!-- LINK: x_shaft -->
+  <link name="x_shaft">
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+
+    <collision name='x_shaft_collision'>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.40 0.01 0.01"/>
+      </geometry>
+    </collision>
+
+    <!-- <visual name='x_shaft_visual'>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.40 0.01 0.01"/>
+      </geometry>
+    </visual> -->
+  </link>
+
+  <!-- LINK: y_shaft -->
+  <link name="y_shaft">
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+
+    <collision name='y_shaft_collision'>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.40 0.01"/>
+      </geometry>
+    </collision>
+
+    <!-- <visual name='y_shaft_visual'>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.40 0.01"/>
+      </geometry>
+    </visual> -->
+  </link>
+
+  <!-- LINK: z_shaft -->
+  <link name="z_shaft">
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+
+    <collision name='z_shaft_collision'>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.40"/>
+      </geometry>
+    </collision>
+
+    <!-- <visual name='z_shaft_visual'>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.40"/>
+      </geometry>
+    </visual> -->
+  </link>
+
+  <!-- LINK: camera1 -->
+  <link name="camera1">
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+
+    <collision name='camera1_collision'>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.02 0.02 0.02"/>
+      </geometry>
+    </collision>
+
+    <visual name='camera1_visual'>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.02 0.02 0.02"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- LINK: bcx -->
+  <link name="bcx">
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+
+    <collision name="bcx_collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh scale="0.07 0.07 0.07" filename="package://sim/meshes/bcx.stl"/>
+      </geometry>
+    </collision>
+
+    <visual name="bcx_visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh scale="0.07 0.07 0.07" filename="package://sim/meshes/bcx.stl"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- LINK: background -->
+  <link name="background">
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+
+    <collision name='background_collision'>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="7.0 0.5 3.0"/>
+      </geometry>
+    </collision>
+
+    <visual name='background_visual'>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="7.0 0.5 3.0"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- COLOR: area -->
+  <!-- <gazebo reference="area">
+    <material>Gazebo/BlueTransparent</material>
+  </gazebo> -->
+
+  <!-- COLOR: x_shaft -->
+  <!-- <gazebo reference="x_shaft">
+    <material>Gazebo/White</material>
+  </gazebo> -->
+
+  <!-- COLOR: y_shaft -->
+  <!-- <gazebo reference="y_shaft">
+    <material>Gazebo/White</material>
+  </gazebo> -->
+
+  <!-- COLOR: z_shaft -->
+  <!-- <gazebo reference="z_shaft">
+    <material>Gazebo/White</material>
+  </gazebo> -->
+
+  <!-- COLOR: camera1 -->
+  <gazebo reference="camera1">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+  <!-- COLOR: bcx -->
+  <gazebo reference="bcx">
+    <material>Gazebo/Green</material>
+  </gazebo>
+
+  <!-- COLOR: background -->
+  <gazebo reference="background">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <!-- JOINT: base -->
+  <joint name="base_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_footprint"/>
+    <child link="area"/>
+  </joint>
+
+  <!-- JOINT: area -->
+  <joint name="area_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="area"/>
+    <child link="x_shaft"/>
+  </joint>
+
+  <!-- JOINT: x_joint -->
+  <joint name="x_joint" type="prismatic">
+    <axis xyz="1 0 0"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="x_shaft"/>
+    <child link="y_shaft"/>
+    <limit effort="1000.0" lower="-0.2" upper="0.2" velocity="30"/>
+    <dynamics damping="0.0" friction="1.0"/>
+  </joint>
+
+  <!-- JOINT: y_joint -->
+  <joint name="y_joint" type="prismatic">
+    <axis xyz="0 1 0"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="y_shaft"/>
+    <child link="z_shaft"/>
+    <limit effort="1000.0" lower="-0.2" upper="0.2" velocity="30"/>
+    <dynamics damping="0.0" friction="1.0"/>
+  </joint>
+
+  <!-- JOINT: z_joint -->
+  <joint name="z_joint" type="prismatic">
+    <axis xyz="0 0 1"/>
+    <origin xyz="0 0 0" rpy="0 0 1.5707963"/>
+    <parent link="z_shaft"/>
+    <child link="camera1"/>
+    <limit effort="1000.0" lower="-0.2" upper="0.2" velocity="30"/>
+    <dynamics damping="0.0" friction="1.0"/>
+  </joint>
+
+  <!-- JOINT: bcx -->
+  <joint name="bcx_joint" type="fixed">
+    <origin xyz="0 2 0" rpy="0 0 0"/>
+    <parent link="base_footprint"/>
+    <child link="bcx"/>
+  </joint>
+
+  <!-- JOINT: background -->
+  <joint name="background_joint" type="fixed">
+    <origin xyz="0 4 1.3" rpy="0 0 0"/>
+    <parent link="base_footprint"/>
+    <child link="background"/>
+  </joint>
+
+  <!-- ROS2 CONTROL: GazeboSystem -->
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+
+    <joint name="x_joint">
+      <command_interface name="position">
+        <param name="min">-0.2</param>
+        <param name="max">0.2</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+
+    <joint name="y_joint">
+      <command_interface name="position">
+        <param name="min">-0.2</param>
+        <param name="max">0.2</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+
+    <joint name="z_joint">
+      <command_interface name="position">
+        <param name="min">-0.2</param>
+        <param name="max">0.2</param>
+      </command_interface>
+      <state_interface name="position"/>
+    </joint>
+  </ros2_control>
+
+  <!-- PLUGIN: camera_movement -->
+  <gazebo>
+    <plugin name="camera_movement" filename="libgazebo_ros2_control.so">
+      <parameters>$(find sim)/config/camera_movement.yaml</parameters>
+    </plugin>
+  </gazebo>
+
+  <!-- PLUGIN: camera1 -->
+  <gazebo reference="camera1">
+    <sensor type="camera" name="camera1">
+      <visualize>false</visualize>
+      <update_rate>30.0</update_rate>
+
+      <camera name="camera1">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>800</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <distortion>
+          <k1>0.0</k1>
+          <k2>0.0</k2>
+          <k3>0.0</k3>
+          <p1>0.0</p1>
+          <p2>0.0</p2>
+          <center>0.5 0.5</center>
+        </distortion>
+      </camera>
+
+      <plugin name="camera1_controller" filename="libgazebo_ros_camera.so">
+        <always_on>true</always_on>
+
+        <ros>
+          <namespace>/car</namespace>
+          <argument>camera/image_raw:=/car/camera/image</argument>
+          <argument>camera/camera_info:=/car/camera/image/camera_info</argument>
+        </ros>
+        
+        <camera_name>camera1</camera_name>
+        <frame_name>base_footprint</frame_name>
+        <hack_baseline>0.07</hack_baseline>
+      </plugin>
+    </sensor>
+  </gazebo>
+</robot>

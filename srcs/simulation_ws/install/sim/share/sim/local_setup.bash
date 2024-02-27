@@ -1,0 +1,1 @@
+/home/ha/Desktop/bcx/bcx_ws/build/sim/ament_cmake_environment_hooks/local_setup.bash
