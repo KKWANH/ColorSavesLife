@@ -1,0 +1,3 @@
+[submodule "plugins/color_disability/yolov5"]
+	path = plugins/color_disability/yolov5
+	url = https://github.com/ultralytics/yolov5
