@@ -1,5 +1,7 @@
 # 🎨 Color Saves Life!
 
+<img src="imgs/logo.png">
+
 - [🎨 Color Saves Life!](#-color-saves-life)
   - [🛠️ Features](#️-features)
   - [📁 Folder Structure](#-folder-structure)
