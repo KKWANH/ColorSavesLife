@@ -1,4 +1,5 @@
 import  cv2
+import torch
 import  numpy as np
 from    PIL \
         import  Image, ImageDraw, ImageFont
@@ -20,7 +21,12 @@ def draw_corner_rect(image, pt1, pt2, color, thickness, length, padding):
 
 def put_text_with_background(image_pil, text, org, font, text_color, bg_color, padding=5, radius=4):
     draw = ImageDraw.Draw(image_pil)
-    text_width, text_height = draw.textsize(text, font=font)
+    def textsize(text, font):
+        im = Image.new(mode="P", size=(0, 0))
+        draw = ImageDraw.Draw(im)
+        _, _, width, height = draw.textbbox((0, 0), text=text, font=font)
+        return width, height
+    text_width, text_height = textsize(text, font=font)
     x, y = org
     box_coords = (x - padding, y - padding, x + text_width + padding, y + text_height + padding)
     draw.rounded_rectangle(box_coords, radius, fill=bg_color)
@@ -38,6 +44,8 @@ class   ColorDisability(Plugin):
         def __init__(self):
             pass
         def get_traffic_light_color(self, frame):
+            cv2.imshow("Red", frame)
+            cv2.waitKey(1)
             hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
             red_lower = np.array([0, 50, 50])
@@ -69,6 +77,8 @@ class   ColorDisability(Plugin):
             if roi.size == 0:
                 raise ValueError(f"ROI {roi_bounds} results in an empty image. Check the coordinates.")
 
+            cv2.imshow("frame", frame)
+            cv2.waitKey(1)
             color = self.get_traffic_light_color(roi)
             print("[Plugin] [ColorDisability] [TrafficLight] detected color: ", color)
 
@@ -167,23 +177,23 @@ class   ColorDisability(Plugin):
         return frame
 
     def predict(self, frame):
-        model_path = " ./model/bestl.pt"
+        model_path = "./plugins/color_disability/model/bestl.pt"
         model = torch.hub.load("./yolov5", "custom", path=model_path, source='local')
 
 #        Preprocess Image
-#        image = cv2.imread(image_path)
-#        resized_image = cv2.resize(image, (640, 640)).astype('float32') / 255.0
-#        img_tensor = torch.from_numpy(resized_image).permute(2, 0, 1).unsqueeze(0)
+        print("1")
+        resized_image = cv2.resize(frame, (640, 640)).astype('float32') / 255.0
+        img_tensor = torch.from_numpy(resized_image).permute(2, 0, 1).unsqueeze(0)
         
         with torch.no_grad():
             output = model(img_tensor)
         
-        conf_minimum = 0.8
+        print("2")
 
         tobjs: TrafficObject = []
         light_cnt = 0
         sign_cnt = 0
-
+        conf_threshold = 0.8
         for i in range(output.size(1)):
             detection = output[0, i]
 
@@ -207,17 +217,16 @@ class   ColorDisability(Plugin):
                 y2 = int(y_center + height / 2)
                 
                 if(light > sign and light_cnt == 0):
-                    tobjs.append(TrafficObject([y1, y2, x1, x2], LIGHT))
+                    tobjs.append(TrafficObject([x1, x2, y1, y2], LIGHT))
                     light_cnt += 1
                 elif(light < sign and sign_cnt == 0):
-                    tobjs.append(TrafficObject([y1, y2, x1, x2], SIGN))
+                    tobjs.append(TrafficObject([x1, x2, y1, y2], SIGN))
                     sign_cnt += 1
 
         return (frame, tobjs)
 
     def start(self, frame):
         frame, tobjs = self.predict(frame)
-        with torch.no_grad():
-            output = model(img_tensor)
-            frame = self.opencv(frame, tobjs)
+        print("[Plugin] [ColorDisability] Detected objects: ", len(tobjs))
+        frame = self.opencv(frame, tobjs)
         return frame
