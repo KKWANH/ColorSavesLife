@@ -13,10 +13,8 @@ from image_subscriber import ImageSubscriber
 import rclpy
 import threading
 
-output = 'output_video.avi'
-
-fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-out = cv2.VideoWriter(output, cv2.VideoWriter_fourcc(*'DIVX'), 1, (880, 880))
+#fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+#out = cv2.VideoWriter('output.mp4', fourcc, 1.0, (880, 880)) 
 
 class   DisabilityAssistant:
 
@@ -35,13 +33,13 @@ class   DisabilityAssistant:
                     frame = self.plugin_master.start(frame)
                     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
                     cv2.imshow("Frame", frame)
-                    out.write(frame)
+#                    out.write(frame)
                     if cv2.waitKey(1) & 0xFF == ord('q'):
                         break
         except Exception as _exp:
             print("Error", _exp)
         finally:
-            out.release()
+            #            out.release()
             cv2.destroyAllWindows()
 
     def start(self):
