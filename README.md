@@ -1,6 +1,6 @@
 # 🎨 Color Saves Life!
 
-<img src="imgs/logo.png">
+![logo](/imgs/logo.png){: width="40%"}{: .center}
 
 - [🎨 Color Saves Life!](#-color-saves-life)
   - [🛠️ Features](#️-features)
