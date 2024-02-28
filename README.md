@@ -103,7 +103,69 @@ ros2 bag play test_drive_data
 rviz2 # Add Image_msg -> Set topic (/car/camera1/image_raw)
 ```
 
-### World of Simulator
+## 🚦 World of Simulation
+
+<img src="/imgs/simulation_world.png" align="center">
+
+<img src="/imgs/car_road_view.png" align="center">
+
+https://github.com/lalywr2000/bcx/assets/138571365/d49ebb2e-aac5-495d-8345-0693ad43d52a
+
+We used ROS2 and Gazebo simulation to implement and test our idea. The following demonstrates how to build from source, run the simulation, and process the video. We used Ubuntu 20.04 with ROS2 Foxy and Gazebo 11, assuming you have a similar working environment and correct installations.
+
+```shell
+cd srcs/simulation_ws
+colcon build
+```
+
+#### 1. Test eye tracking simulator
+
+https://github.com/lalywr2000/bcx/assets/138571365/a6946d80-a88a-4c9a-8581-deb4b4257a43
+
+https://github.com/lalywr2000/bcx/assets/138571365/4d64d939-9e5a-4807-887e-0656b5a2c7d9
+
+This program perceives the position of your eyes through a webcam and moves the camera object on Gazebo accordingly. This allows you to obtain a first-person perspective-like view within the simulation, mimicking your movements as if you were moving within the simulation environment.
+
+Secify the path to the model in the `gui.ini` file located in `.gazebo`, and set the `gazebo_model_path` in the `package.xml` file to fit your local environment, you will be able to use the following features. Subscribe to the Image topic `car/camera1/image_raw` in RViz2 to monitor the first-person perspective.
+
+```shell
+# Terminal 1
+source install/local_setup.bash
+ros2 launch sim test.launch.py
+
+# Terminal 2
+source install/local_setup.bash
+ros2 run sim camera_movement
+
+# Terminal 3
+source install/local_setup.bash
+ros2 run tracking eye_tracking
+
+# Terminal 4
+rviz2
+```
+
+#### 2. Test teleoperation of the vehicle
+
+https://github.com/lalywr2000/bcx/assets/138571365/c7b8eb35-c8f8-461a-afef-48794177866c
+
+Now that you have the vision, it's time to drive. This time, we'll simulate driving in a world with simple roads, buildings, and traffic objects. By following the instructions below, you'll be able to move a vehicle forward, backward, and steer within the simulation. We'll use the `pygame` library for keyboard input with the WASD keys, assuming you have it installed.
+
+Click on the empty pygame screen that pops up, then try using WASD keys to move the vehicle.
+
+```shell
+# Terminal 1
+source install/local_setup.bash
+ros2 launch sim sim.launch.py
+
+# Terminal 2
+source install/local_setup.bash
+ros2 run teleop controller
+
+# Terminal 3
+rviz2
+```
+If you have successfully followed along up to this point, you should have an idea of how to simultaneously run eye tracking and vehicle driving. Now, utilize both functionalities to collect realistic visual data and provide it to vision processing model.
 
 
 ## DEMO!!
