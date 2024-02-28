@@ -50,9 +50,6 @@ Another important feature of our program, is **Easy-to-develop**. If you just ad
  │
  ├── test_drive_data.tar.xz   # rosbag data of driving in gazebo to test the detection model
  │
- ├── docker/
- ├── docker-compose.yaml
- │
  ├── LICENSE
  │
  ├── imgs/        # image files for documentation
@@ -73,7 +70,7 @@ docker load --input ColorSavesLife.tar
 3. Open 3 terminal 
 ```shell
 # Fist Terminal
-docker run -it --env DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix csl:0.1 /bin/bash
+docker run -it --env DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix csl:1.0 /bin/bash
 
 # Second Terminal
 docker ps # Check docker container ID
