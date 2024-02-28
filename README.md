@@ -188,10 +188,6 @@ Sound sense is also so much important in driving situations and sirious problem.
 ### AI Driving Assistant for Dementia
 Dmentia is also a serious problem for driving. There are 55 million people who have dementia. Even their disablity is not effecting to their driving skills, they are not allowed to drive in some countries. Because they tend to pay less attention to the road and they are not able to make a right decision. With our AI Driving Assistant plugin for Dementia, that learn the driver's driving pattern and other driving data, that can show some warning message or make a sound when the driver is not paying attention to the road or detecting some unusual driving pattern.
 
-### User Status with Germification
-XXX
-
-
 So our platform is not only for color disability, bu also for other disability. That have so much potential to help peeople who have disability and make their life much more easier and enjoyable for driving.
 
 #### Architecture
