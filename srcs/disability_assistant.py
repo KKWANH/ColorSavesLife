@@ -46,10 +46,14 @@ class   DisabilityAssistant:
             while rclpy.ok():
                 if self.image_subscriber_.latest_image is not None:
                     self.frames.append(self.image_subscriber_.latest_image)
+                    print("[DEBUG] frame received from ros")
+                else:
+                    print("[DEBUG] no more frames")
+                    break
         except Exception as _exp:
             print("Error", _exp)
         finally:
-            print("final zone")
+            print("[DEBUG] Fianlly part")
             index = 0
             for frame in self.frames:
                 frame = self.plugin_master.start(frame)
@@ -62,7 +66,7 @@ class   DisabilityAssistant:
             cv2.destroyAllWindows()
 
     def start(self):
-        process_thread = threading.Thread(target=self.process_image_non_realtime, args=())
+        process_thread = threading.Thread(target=self.process_image_realtime, args=())
         process_thread.start()
         rclpy.spin(self.image_subscriber_)
         self.image_subscriber_.destroy_node()
