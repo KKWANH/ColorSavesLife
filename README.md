@@ -61,17 +61,47 @@ Another important feature of our program, is **Easy-to-develop**. If you just ad
 
 ## ❓ How to Use
 
-1. Clone the repository
+1. Download the docker image and unzip
 ```shell
-git clone
+# Download Releases/ColorSavesLife/ColorSavesLife.tar.bz2
+bunzip2 ColorSavesLife.tar.bz2
 ```
-
 2. Turn on the docker environment
 ```shell
-docker run
+docker load --input ColorSavesLife.tar
+```
+3. Open 3 terminal 
+```shell
+# Fist Terminal
+docker run -it --env DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix csl:0.1 /bin/bash
+
+# Second Terminal
+docker ps # Check docker container ID
+docker exec -it <container_ID> /bin/bash
+
+# Thrid Terminal
+docker ps
+docker exec -it <container_ID> /bin/bash
+```
+4. Abstract rosbag data
+```shell
+cd ~/ColorSavesLife
+tar -xf test_drive_data.tar.xz
 ```
 
-3. Get in to docker container, turn on the python script
+5. Run the application
+```shell
+# First Terminal
+cd ~/ColorSavesLife/srcs
+python3 main.py
+
+# Second Terminal
+cd ~/ColorSavesLife
+ros2 bag play test_drive_data
+
+# Third Terminal
+rviz2 # Add Image_msg -> Set topic (/car/camera1/image_raw)
+```
 
 ### World of Simulator
 
