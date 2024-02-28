@@ -24,23 +24,19 @@ class   DisabilityAssistant:
         self.host = host
         self.port = port
         self.image_subscriber_ = ImageSubscriber()
+        self.frames = []
 
     def process_image(self):
         try:
             while rclpy.ok():
                 if self.image_subscriber_.latest_image is not None:
-                    frame = self.image_subscriber_.latest_image
-                    frame = self.plugin_master.start(frame)
-                    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-                    cv2.imshow("Frame", frame)
-#                    out.write(frame)
-                    if cv2.waitKey(1) & 0xFF == ord('q'):
-                        break
+                    self.frames.append(self.image_subscriber_.latest_image)
         except Exception as _exp:
             print("Error", _exp)
         finally:
-            #            out.release()
-            cv2.destroyAllWindows()
+            for frame in self.frames:
+                frame = self.plugin_master.start(frame)
+                frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     def start(self):
         process_thread = threading.Thread(target=self.process_image, args=())
