@@ -49,10 +49,14 @@ class   DisabilityAssistant:
         except Exception as _exp:
             print("Error", _exp)
         finally:
+            print("final zone")
+            index = 0
             for frame in self.frames:
                 frame = self.plugin_master.start(frame)
                 frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
                 cv2.imshow("Frame", frame)
+                cv2.imwrite(f"assets/imgs/frame{index}", frame)
+                index += 1
                 if cv2.waitKey(1) & 0xFF == ord('q'):
                     break
             cv2.destroyAllWindows()
