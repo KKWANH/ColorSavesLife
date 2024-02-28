@@ -18,6 +18,13 @@ Our **Color Saves Life** program comes at this point. Our goal is to attatch **t
 
 Another important feature of our program, is **Easy-to-develop**. If you just add your detecting algorithm and drawing part(opencv) for each frame in `plugins` folder, it is very easy develop new features. You can even run multiple plugins at same time, with plugin_master's features. [Check here](#-future-development-plan) and find more interesting ideas for future development. 
 
+## 🏛️ Architecture - Ideal
+
+<img src="/imgs/architecture-ideal.png" align="center">
+
+## 🏛️ Architecture - Prototype
+
+<img src="/imgs/architecture-prototype.png" align="center">
 
 ## 📁 Folder Structure
 ```shell
@@ -102,9 +109,10 @@ rviz2 # Add Image_msg -> Set topic (/car/camera1/image_raw)
 
 ## 🚦 World of Simulation
 
-<img src="/imgs/simulation_world.png" align="center">
-
-<img src="/imgs/car_road_view.png" align="center">
+<div widht="100%" align="center">
+    <img src="/imgs/simulation_world.png" width="49%" align="center">
+    <img src="/imgs/car_road_view.png" width="49%" align="center">
+</div>
 
 https://github.com/Bosch-ConnectedExperience-2024/ColorSavesLife/assets/138571365/c376234c-f434-4c45-beb0-1f5045a5500f
 
@@ -166,15 +174,6 @@ If you have successfully followed along up to this point, you should have an ide
 
 
 ## DEMO!!
-
-
-## 🏛️ Architecture - Ideal
-
-<img src="/imgs/architecture-ideal.png" align="center">
-
-## 🏛️ Architecture - Prototype
-
-<img src="/imgs/architecture-prototype.png" align="center">
 
 ## 🤔 Future Development Plan
 Color disability is not only disability that affects to normal life. In the report of WHO(World Health Organization), one of five people has problem of hearing [(who.int/health-topics/hearing-loss)](https://www.who.int/health-topics/hearing-loss#tab=tab_1). It is very important fact that 80% of them are living in low-income/mid-income countries, and hearing care interventions are cost-effective. If they can get help for their life with getting driving skills, this will effect a lot. With this solucation Solution, we can help them to drive much more safely and make their life much more easier and enjoyable for driving. As an example, we show you some of our future development plan for hearing disability and dementia. 
