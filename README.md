@@ -47,7 +47,7 @@ Another important feature of our program, is **Easy-to-develop**. If you just ad
  │       ├── assets/     # test images, fonts
  │       ├── plugins/    # You can deploy your own plugin here
  │       │   ├── color_disability/
- │       │   │   ├── model/
+ │       │   │   ├── model/ # Train by using YOLOv5
  │       │   │   ├── color_disability.py
  │       │   │   └── traffic_object.py
  │       │   ├── plugin.py
