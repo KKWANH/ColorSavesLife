@@ -87,7 +87,7 @@ docker exec -it <container_ID> /bin/bash
 docker ps
 docker exec -it <container_ID> /bin/bash
 ```
-4. Abstract rosbag data
+4. Unzip rosbag data
 ```shell
 cd ~/ColorSavesLife
 tar -xf test_drive_data.tar.xz
