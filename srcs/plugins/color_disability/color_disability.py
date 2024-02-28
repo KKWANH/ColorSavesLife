@@ -174,7 +174,7 @@ class   ColorDisability(Plugin):
         return frame
 
     def predict(self, frame):
-        model_path = "./plugins/color_disability/model/bestl.pt"
+        model_path = "./plugins/color_disability/model/bests.pt"
         model = torch.hub.load("./yolov5", "custom", path=model_path, source='local')
 
 #        Preprocess Image
