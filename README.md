@@ -127,7 +127,7 @@ colcon build
 
 https://github.com/Bosch-ConnectedExperience-2024/ColorSavesLife/assets/138571365/86c5ad5e-6314-4f11-af86-6f722797cfdf
 
-https://github.com/Bosch-ConnectedExperience-2024/ColorSavesLife/assets/138571365/05888c28-bb9f-433a-9b15-dc976a856f4e
+https://github.com/Bosch-ConnectedExperience-2024/ColorSavesLife/assets/55338823/1480d307-f801-46f5-a8f9-12a51f2f85c3
 
 This program perceives the position of your eyes through a webcam and moves the camera object on Gazebo accordingly. This allows you to obtain a first-person perspective-like view within the simulation, mimicking your movements as if you were moving within the simulation environment.
 
