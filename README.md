@@ -175,9 +175,9 @@ If you have successfully followed along up to this point, you should have an ide
 
 ## DEMO!!
 
-https://github.com/Bosch-ConnectedExperience-2024/ColorSavesLife/assets/98635404/0e2eda91-c51c-46ab-abaf-fde606f255c4
-
 https://github.com/Bosch-ConnectedExperience-2024/ColorSavesLife/assets/55338823/a42845fc-fdf4-4530-9ada-064cea147b3f
+
+https://github.com/Bosch-ConnectedExperience-2024/ColorSavesLife/assets/98635404/0e2eda91-c51c-46ab-abaf-fde606f255c4
 
 
 ## 🤔 Future Development Plan
