@@ -203,3 +203,8 @@ So our platform is not only for color disability, bu also for other disability. 
 - Sujong Ha: [@lalywr2000](https://github.com/lalywr2000)
 - Shuta Ogura: [@Shuta-Syd](https://github.com/Shuta-Syd)
 - Oscar Lopez
+
+## 👍 References
+- [Eye tracking](https://github.com/antoinelame/GazeTracking)
+- [Gazebo world](https://bitbucket.org/theconstructcore/riabot/src/master/)
+- [Vehicle model](https://www.thingiverse.com/thing:3076864)
