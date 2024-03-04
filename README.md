@@ -200,12 +200,6 @@ Dmentia is also a serious problem for driving. There are 55 million people who h
 
 So our platform is not only for color disability, bu also for other disability. That have so much potential to help peeople who have disability and make their life much more easier and enjoyable for driving.
 
-#### Architecture
-
-#### Example image
-
-### 🏫 Gamified Education Application
-
 ## 🫂 Team Member
 - Kwanho Kim: [@KKWANH](https://github.com/KKWANH)
 - Hokyung Park: [@Ho-mmd](https://github.com/ho-mmd)
