@@ -1,12 +1,12 @@
 <div width="100%" align="center"><h1>🎨 Color Saves Life!</h1></div>
-<div width="100%" align="center"><img src="/imgs/logo.png" align="center" width="50%"></div>
+<div width="100%" align="center"><img src="/assets/imgs/logo.png" align="center" width="50%"></div>
 <div width="100%" align="center"><hr width="50" align="center"></div>
 
 # 🚢 Welcome abord, let me explain what it is
 
 <div width="100%" align="center">
-    <img width="49%" src="/imgs/friedrichstrasse-road.jpg">
-    <img width="49%" src="/imgs/friedrichstrasse-road-grayscale.jpg">
+    <img width="49%" src="/assets/imgs/friedrichstrasse-road.jpg">
+    <img width="49%" src="/assets/imgs/friedrichstrasse-road-grayscale.jpg">
 </div>
 
 > This example is for **achromatopsia**, which can see the world with only grayscale. There are lot more types of color-disability than chromatopsia.
@@ -18,49 +18,58 @@ Our **Color Saves Life** program comes at this point. Our goal is to attatch **t
 
 Another important feature of our program, is **Easy-to-develop**. If you just add your detecting algorithm and drawing part(opencv) for each frame in `plugins` folder, it is very easy develop new features. You can even run multiple plugins at same time, with plugin_master's features. [Check here](#-future-development-plan) and find more interesting ideas for future development. 
 
+## 🎥 Presenation Matrials
+
+Please visit [here](/assets/presentation/) to check our final videos and presentation files(pptx)! It may crash a little bit because of lack of font files, but I hope it works fine in your machines (:
+
 ## 🏛️ Architecture - Ideal
 
-<img src="/imgs/architecture-ideal.png" align="center">
+<img src="/assets/imgs/architecture-ideal.png" align="center">
 
 ## 🏛️ Architecture - Prototype
 
-<img src="/imgs/architecture-prototype.png" align="center">
+<img src="/assets/imgs/architecture-prototype.png" align="center">
 
 ## 📁 Folder Structure
 ```shell
 ./
+ ├── ros2pkg/
+ │   ├── image_subscriber/
+ │   └── test_publisher/
  │
  ├── srcs/
- │   │   
- │   ├── ros2pkg/
- │   │   ├── image_subscriber/
- │   │   └── test_publisher/
+ │   │   # Simulation Part
+ │   ├── simulation_ws/src/
+ │   │   ├── sim/        # ros2 pkg for gazbeo simulation world and vehicle model
+ │   │   ├── teleop/     # ros2 pkg for gazbeo vehicle teleoperation
+ │   │   └── tracking/   # ros2 pkg for detecting the eye position
  │   │
- │   └── srcs/
- │       │   # Simulation Part
- │       ├── simulation_ws/src/
- │       │   ├── sim/        # ros2 pkg for gazbeo simulation world and vehicle model
- │       │   ├── teleop/     # ros2 pkg for gazbeo vehicle teleoperation
- │       │   └── tracking/   # ros2 pkg for detecting the eye position
- │       │
- │       │   # Python Client
- │       ├── assets/     # test images, fonts
- │       ├── plugins/    # You can deploy your own plugin here
- │       │   ├── color_disability/
- │       │   │   ├── model/ # Train by using YOLOv5
- │       │   │   ├── color_disability.py
- │       │   │   └── traffic_object.py
- │       │   ├── plugin.py
- │       │   └── plugin_master.py
- │       ├── disability_assistant.py
- │       └── main.py
+ │   │   # Submodules
+ │   ├── yolov5/
+ │   │
+ │   │   # Python Client
+ │   ├── assets/     # test images, fonts
+ │   ├── plugins/    # You can deploy your own plugin here
+ │   │   ├── color_disability/
+ │   │   │   ├── model/ # Train by using YOLOv5
+ │   │   │   ├── color_disability.py
+ │   │   │   └── traffic_object.py
+ │   │   ├── plugin.py
+ │   │   └── plugin_master.py
+ │   ├── disability_assistant.py
+ │   ├── image_subscriber.py
+ │   ├── main.py
+ │   └── requirement.txt
  │
  ├── test_drive_data.tar.xz   # rosbag data of driving in gazebo to test the detection model
  │
  ├── LICENSE
  │
- ├── imgs/        # image files for documentation
- └── README.md    # your entrypoint!
+ ├── assets/                # asset folder for documentations
+ │   ├── imgs/              # image files
+ │   └── presentations/     # presentation matrials
+ │
+ └── README.md          # your entrypoint!
 ```
 
 ## ❓ How to Use
@@ -110,8 +119,8 @@ rviz2 # Add Image_msg -> Set topic (/car/camera1/image_raw)
 ## 🚦 World of Simulation
 
 <div widht="100%" align="center">
-    <img src="/imgs/simulation_world.png" width="49%" align="center">
-    <img src="/imgs/car_road_view.png" width="49%" align="center">
+    <img src="/assets/imgs/simulation_world.png" width="49%" align="center">
+    <img src="/assets/imgs/car_road_view.png" width="49%" align="center">
 </div>
 
 https://github.com/Bosch-ConnectedExperience-2024/ColorSavesLife/assets/138571365/c376234c-f434-4c45-beb0-1f5045a5500f
