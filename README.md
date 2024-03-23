@@ -186,7 +186,7 @@ If you have successfully followed along up to this point, you should have an ide
 
 https://github.com/lalywr2000/ColorSavesLife/assets/138571365/6caf75e7-8876-491f-bd97-f706e9e7c992
 
-https://github.com/Bosch-ConnectedExperience-2024/ColorSavesLife/assets/98635404/0e2eda91-c51c-46ab-abaf-fde606f255c4
+https://github.com/lalywr2000/ColorSavesLife/assets/138571365/4969cbd3-ac2f-44fb-9544-e81ee25ccedf
 
 
 ## 🤔 Future Development Plan
