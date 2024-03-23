@@ -186,7 +186,7 @@ If you have successfully followed along up to this point, you should have an ide
 
 https://github.com/lalywr2000/ColorSavesLife/assets/138571365/6caf75e7-8876-491f-bd97-f706e9e7c992
 
-https://github.com/lalywr2000/ColorSavesLife/assets/138571365/4969cbd3-ac2f-44fb-9544-e81ee25ccedf
+https://github.com/lalywr2000/ColorSavesLife/assets/138571365/93db22f7-9478-4a3d-a849-f7ce598773f8
 
 
 ## 🤔 Future Development Plan
