@@ -161,7 +161,7 @@ rviz2
 
 #### 2. Test teleoperation of the vehicle
 
-https://github.com/Bosch-ConnectedExperience-2024/ColorSavesLife/assets/138571365/972c5da9-5a4f-46a0-8cbb-fad433be1c8a
+https://github.com/lalywr2000/ColorSavesLife/assets/138571365/7bf3ccfd-fe2e-4467-bfd7-ec0203337a90
 
 Now that you have the vision, it's time to drive. This time, we'll simulate driving in a world with simple roads, buildings, and traffic objects. By following the instructions below, you'll be able to move a vehicle forward, backward, and steer within the simulation. We'll use the `pygame` library for keyboard input with the WASD keys, assuming you have it installed.
 
